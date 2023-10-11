@@ -27,3 +27,5 @@ Estados de las peticiones
 * isLoading vs isFetching - isLoading se refiere a cuando estamos cargando los datos por primera vez  y no tenemos nada de datos en cache, isFetching se dispara cada vez que estemos haciendo una peticion. usualmente vamos a usar el isLoading.
 
 * initialData y placeHolderData nos ayudan a para poder hacer algo con el tiempo de busqueda mientras se esta cargando la data
+
+* prefetch query
