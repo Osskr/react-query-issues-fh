@@ -29,3 +29,5 @@ Estados de las peticiones
 * initialData y placeHolderData nos ayudan a para poder hacer algo con el tiempo de busqueda mientras se esta cargando la data
 
 * prefetch query
+
+* chequear updatedAt - nos ayuda a considerar cuando fue la ultima vez que se actualizaron los datos
