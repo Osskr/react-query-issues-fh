@@ -14,6 +14,7 @@ export const getIssueInfo = async (issueNumber:number):Promise<Issue>  => {
 }
 
 
+
 export const getIssueComments = async (issueNumber:number):Promise<Issue[]>  => {
      
   await sleep(2)
