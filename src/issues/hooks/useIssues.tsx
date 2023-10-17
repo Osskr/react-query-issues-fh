@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useEffect, useState} from 'react'
 import { Issue, State } from '../interfaces/issue'
 import { sleep } from '../../helpers/sleep'
 import { githubApi } from '../../api/githubApi'
@@ -38,6 +38,11 @@ export const useIssues = ({state,labels}:Props) => {
 
     const [page, setPage] = useState(1)
 
+    useEffect(()=>{
+        setPage(1)        
+    }, [state,labels])
+    
+
     const issuesQuery = useQuery(['issuesQuery', {state, labels, page}], () => getIssues({labels,state, page}))
   
     const nextPage = ()=> {
@@ -56,7 +61,7 @@ export const useIssues = ({state,labels}:Props) => {
         issuesQuery,
         
         //getter
-        page,
+        page: issuesQuery.isFetching ? 'Loading' : page,
 
         //Methods
         nextPage,
